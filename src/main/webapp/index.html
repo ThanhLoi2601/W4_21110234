@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML_CSS</title>
+        <link rel="stylesheet" href="styles/main.css" type="text/css"/>  
+    </head>
+    <body>
+        <h1>Survey</h1>
+        <p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
+        <form action="emailList" method="post">
+            <input type="hidden" name="action" value="add">
+            <h2>Your information</h2>
+            
+            <label><b>First Name</b></label>
+            <input type="text" name="firstName" required><br>
+            
+            <label><b>Last Name</b></label>
+            <input type="text" name="lastName" required><br>
+            
+            <label><b>Email</b></label>
+            <input type="email" name="email" required><br>
+            
+            <h2>How did you hear about us?</h2>
+            <input type="radio" name='hear' value="Search Engine" required />Search engine 
+            <input type="radio" name='hear' value="Word Of Mouth" required />Word of mouth
+            <input type="radio" name='hear' value="Other" required />Other <br>
+            
+            <h2>Would you like to receive announcements 
+                about new CDs and special offers?</h2>
+            <input type="checkbox" name="checkReceive" value="True" readonly />YES, I'd like that <br>
+            
+            <label style= "width: 10em; margin-top:0.5em;" for="contact">Please contact me by:</label>
+            <select id="contact" name="contact" style= "width: 12em; margin-top:0.5em;">
+                <option value="Email">Email or postal mail</option>
+                <option value="Call phone">Call phone</option>
+            </select> <br>
+            
+            <input type="submit" value="Submit" id="Submit">
+        </form>
+    </body>
+</html>
